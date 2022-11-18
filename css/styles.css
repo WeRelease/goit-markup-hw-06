@@ -758,3 +758,10 @@ address {
 .modal-icon {
   fill: var(--studio-second-color);
 }
+
+.modal-form-massage {
+  display: block;
+}
+textarea {
+  resize: none;
+}
