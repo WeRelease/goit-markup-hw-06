@@ -22,7 +22,9 @@ body {
   color: var(--primary-text-color);
 }
 
-/*                ===========Reset Start======== */
+/* -------------------------------------------------------------------------- */
+/*                                 Reset Start                                */
+/* -------------------------------------------------------------------------- */
 h1,
 h2,
 h3,
@@ -59,7 +61,9 @@ img {
 .bg-color {
   background: var(--bg-color);
 }
-/*                ===========Reset End======== */
+/* -------------------------------------------------------------------------- */
+/*                                  Reset End                                 */
+/* -------------------------------------------------------------------------- */
 section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -73,7 +77,9 @@ section {
   outline-offset: -2px; */
 }
 
-/*                ========HEADER START======== */
+/* -------------------------------------------------------------------------- */
+/*                                HEADER START                                */
+/* -------------------------------------------------------------------------- */
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -177,9 +183,12 @@ section {
   color: var(--accent-color);
 }
 
-/*                ===========HEADER END========             */
-
-/*                ===========HERO START========               */
+/* -------------------------------------------------------------------------- */
+/*                                 HEADER END                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
 .hero {
   max-width: 1600px;
   padding: 200px 0px;
@@ -210,10 +219,14 @@ section {
   text-transform: uppercase;
   color: var(--primary-white-color);
 }
+/* -------------------------------------------------------------------------- */
+/*                                  HERO END                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  BTN START                                 */
+/* -------------------------------------------------------------------------- */
 
-/* ============BTN================= */
-
-/* hero */
+/* ---------------------------------- hero ---------------------------------- */
 
 .btn {
   padding: 10px 32px;
@@ -237,7 +250,7 @@ section {
 .btn:hover {
   background: var(--btn-second-color);
 }
-/* portfolio btn */
+/* ------------------------------ portfolio btn ----------------------------- */
 
 .list-btn {
   display: flex;
@@ -279,7 +292,7 @@ section {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* footer-form-btn */
+/* ----------------------------- footer-form-btn ---------------------------- */
 
 .footer-form-btn {
   display: flex;
@@ -295,7 +308,7 @@ section {
   fill: var(--primary-white-color);
 }
 
-/* modal btn   */
+/* -------------------------------- modal btn ------------------------------- */
 
 .modal-close-btn {
   position: absolute;
@@ -323,9 +336,12 @@ section {
   color: var(--accent-color);
 }
 
-/*                ========HERO END========               */
-
-/*                ========SKILLS START========              */
+/* -------------------------------------------------------------------------- */
+/*                                  BTN END                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                SKILLS START                                */
+/* -------------------------------------------------------------------------- */
 
 .hiden-title {
   display: none;
@@ -370,8 +386,12 @@ section {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-/*                ========SKILLS END========              */
-/*                ========WORKS START========               */
+/* -------------------------------------------------------------------------- */
+/*                                 SKILLS END                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 WORKS START                                */
+/* -------------------------------------------------------------------------- */
 .works {
   margin-top: -94px;
 }
@@ -421,8 +441,12 @@ section {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-/*                ========WORKS END========               */
-/*                ========GANG START========                */
+/* -------------------------------------------------------------------------- */
+/*                                  WORKS END                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 GANG START                                 */
+/* -------------------------------------------------------------------------- */
 .gang {
   background: var(--bg-second-color);
   margin: 0;
@@ -443,7 +467,8 @@ section {
   color: var(--primary-text-color);
 }
 .gang-items {
-  flex-basis: calc(100% / 4 - (30px));
+  /* flex-basis: calc(100% / 4 - (30px)); */
+  flex-basis: calc((100% - 3 * 30px) / 4);
   margin-right: 30px;
   padding-bottom: 30px;
 
@@ -451,6 +476,9 @@ section {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+.gang-items:last-child {
+  margin-right: 0;
 }
 
 .gang-jpg {
@@ -508,8 +536,12 @@ section {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-
-/*                ========CLIENTS START========                */
+/* -------------------------------------------------------------------------- */
+/*                                  GANG END                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                CLIENTS START                               */
+/* -------------------------------------------------------------------------- */
 .clients-title {
   margin-bottom: 50px;
 
@@ -552,19 +584,40 @@ section {
   margin: auto;
   fill: currentColor;
 }
-/*                ========PORTFOLIO START========            */
+/* -------------------------------------------------------------------------- */
+/*                                 CLIENTS END                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               PORTFOLIO START                              */
+/* -------------------------------------------------------------------------- */
 
 /*   Gallery UL   */
 .list-features {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--half-margin));
+  margin-bottom: calc(-1 * var(--half-margin));
   margin-right: calc(-1 * var(--half-margin));
 }
 .features-items {
   flex-basis: calc((100% - 4 * var(--half-margin)) / 3);
-  margin-top: var(--half-margin);
+  margin-bottom: var(--half-margin);
   margin-right: var(--half-margin);
+}
+
+.features-link {
+  display: inline-block;
+  transition: box-shadow var(--time) var(--anim-time);
+}
+
+.features-link:hover,
+.features-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.features-link:hover .overlay-text,
+.features-link:focus .overlay-text {
+  transform: translateY(0%);
 }
 
 .portfolio-wrap {
@@ -592,7 +645,7 @@ section {
   color: var(--primary-white-color);
 
   transition-timing-function: var(--anim-time);
-  transition: transform var(--time);
+  transition: transform var(--time) var(--anim-time);
 }
 .overlay-text {
   font-size: 18px;
@@ -640,9 +693,12 @@ section {
   transition: transform var(--time) var(--anim-time);
 }
 
-/*                ========PORTFOLIO END========            */
-
-/*                ========MODAL WINDOW========            */
+/* -------------------------------------------------------------------------- */
+/*                                PORTFOLIO END                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                MODAL WINDOW START                               */
+/* -------------------------------------------------------------------------- */
 .backdrop {
   position: fixed;
   top: 0;
@@ -703,9 +759,8 @@ section {
 }
 
 .modal-form-group {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
-  font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -764,7 +819,6 @@ section {
 }
 
 .modal-form-massage {
-  margin-bottom: 20px;
   padding: 12px 16px;
   display: block;
   width: 100%;
@@ -821,6 +875,8 @@ section {
   align-items: center;
   justify-content: center;
   gap: 9px;
+
+  line-height: calc(14 / 12);
 }
 
 .modal-form-agreement-desc {
@@ -840,17 +896,20 @@ section {
 textarea {
   resize: none;
 }
+/* -------------------------------------------------------------------------- */
+/*                                MODAL WINDOW END                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                FOOTER START                                */
+/* -------------------------------------------------------------------------- */
 
-/*                  ========FOOTER START========              */
-.adress-wrap {
-  margin-right: 70px;
-}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .container-footer {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -880,7 +939,6 @@ address {
 }
 .footer-social {
   justify-content: center;
-  margin-right: 93px;
 }
 .footer-title {
   margin-bottom: 20px;
@@ -950,10 +1008,11 @@ address {
   margin-right: 12px;
   padding-left: 16px;
 
+  font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--primary-white-color);
   background-color: transparent;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -982,4 +1041,6 @@ address {
   box-shadow: 3px 3px 20px var(--accent-color);
 }
 
-/*                ========FOOTER END========               */
+/* -------------------------------------------------------------------------- */
+/*                                 FOOTER END                                 */
+/* -------------------------------------------------------------------------- */
