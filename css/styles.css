@@ -606,6 +606,7 @@ section {
 
 .features-link {
   display: inline-block;
+  width: 100%;
   transition: box-shadow var(--time) var(--anim-time);
 }
 
