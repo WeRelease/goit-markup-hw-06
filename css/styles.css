@@ -599,7 +599,7 @@ section {
   margin-right: calc(-1 * var(--half-margin));
 }
 .features-items {
-  flex-basis: calc((100% - 4 * var(--half-margin)) / 3);
+  flex-basis: calc((100% - 90px) / 3);
   margin-bottom: var(--half-margin);
   margin-right: var(--half-margin);
 }
@@ -680,8 +680,8 @@ section {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-.card {
-  min-width: 320px;
+.features-items > img {
+  width: 100%;
   height: auto;
 }
 
